@@ -114,9 +114,9 @@ article {
    padding: 30px;
    background: #050505;
    background-size: 100% 100%;
-   opacity: 0.6;
+
    font: bold 25px Century Gothic;
-   text-transform: uppercase;
+
    border-radius: 5%;
 
 }
@@ -128,7 +128,7 @@ article {
    padding: 30px;
    background: #E6E6FA;
    background-size: 100% 100%;
-   opacity: 0.6;
+
    font: bold 25px Century Gothic;
    border-radius: 5%;
 
@@ -141,7 +141,7 @@ section {
    padding: 30px;
    background: #E6E6FA;
    background-size: 100% 100%;
-   opacity: 0.6;
+   opacity: 0.9;
    font: bold 25px Century Gothic;
 
 
