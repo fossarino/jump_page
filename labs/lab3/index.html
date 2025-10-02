@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	 <link rel="stylesheet" href="css/styles.css">
+	<title>Mouse Position & Creative Animations</title>
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div id="mouse-info">Move your mouse!</div>
+	<div id="click-target">Click Me!</div>
+	<div id="animated-ball"></div>
+	<div id="animated-star"><div class="star"></div></div>
+	 <div id="mouse-shadow"></div>
+	<script>
+		// Mouse position display
+		const mouseInfo = document.getElementById('mouse-info');
+		document.addEventListener('mousemove', (e) => {
+			mouseInfo.textContent = `Mouse Position: X=${e.clientX}, Y=${e.clientY}`;
+			mouseInfo.style.background = `rgba(${200 + Math.abs(e.clientX % 55)},${200 + Math.abs(e.clientY % 55)},255,0.8)`;
+		});
+
+		// Animated ball for click
+		const clickTarget = document.getElementById('click-target');
+		const animatedBall = document.getElementById('animated-ball');
+		clickTarget.addEventListener('click', (e) => {
+			// Log event object
+			console.log('Click event:', e);
+			// Animate ball to click location
+			animatedBall.style.left = `${e.clientX - 20}px`;
+			animatedBall.style.top = `${e.clientY - 20}px`;
+			animatedBall.style.opacity = '1';
+			animatedBall.style.transform = 'scale(1.5)';
+			setTimeout(() => {
+				animatedBall.style.transform = 'scale(1)';
+				animatedBall.style.opacity = '0';
+			}, 700);
+		});
+
+		// Creative second animation: double-click triggers a star burst
+		const animatedStar = document.getElementById('animated-star');
+		clickTarget.addEventListener('dblclick', (e) => {
+			// Log event object
+			console.log('Double-click event:', e);
+			animatedStar.style.left = `${e.clientX - 30}px`;
+			animatedStar.style.top = `${e.clientY - 30}px`;
+			animatedStar.style.opacity = '1';
+			animatedStar.style.transform = 'scale(1.5) rotate(360deg)';
+			setTimeout(() => {
+				animatedStar.style.transform = 'scale(1) rotate(0deg)';
+				animatedStar.style.opacity = '0';
+			}, 800);
+		});
+
+		// Bonus: mouse down on body triggers a ripple effect on mouse-info
+		document.body.addEventListener('mousedown', (e) => {
+			mouseInfo.style.boxShadow = `0 0 0 20px rgba(67,198,172,0.3)`;
+			setTimeout(() => {
+				mouseInfo.style.boxShadow = '';
+			}, 400);
+		});
+		 // Shadow follows mouse
+		 const mouseShadow = document.getElementById('mouse-shadow');
+		 document.addEventListener('mousemove', (e) => {
+			 mouseShadow.style.left = e.pageX + 10 + 'px';
+			 mouseShadow.style.top = e.pageY + 10 + 'px';
+			console.log('Mousemove event:', e);
+		 });
+	</script>
+</body>
+</html>

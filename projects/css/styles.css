@@ -1,0 +1,324 @@
+
+/*********CSS reset, lines 3-10**************/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+group,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/**********************End of CSS Reset*****************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: #252525;
+    color: #060505;
+    padding: 20px;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font: bold 25px Century Gothic;
+    background-color: #060505;
+
+}
+header h1 {
+    font: bold 40px Century Gothic;
+    color: #121111;
+    padding-top: 10px;
+    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+header h2 {
+    font: bold 20px arial;
+    color: #020202;
+   
+}
+.header-info {
+   display: inline-block;
+    flex: 1 1 300px;
+    margin: 0;
+     border: 2px solid #010101;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 30px;
+    background: #a3a3a4;
+    background-size: 100% 100%;
+    
+    font: bold 25px Century Gothic;
+    border-color: #010101;
+
+}
+section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 30px;
+    background: #ebebf9;
+    background-size: 100% 100%;
+    opacity: 0.6;
+    font: bold 25px Century Gothic;
+    border-color: #010101;
+
+}
+section h4 {
+    font: bold 40px arial;
+    color: #040404;
+    border: rgb(183, 179, 179) 2px solid;
+    border-radius: 10%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+.lab-description {
+    font: 15px Arial, Helvetica, sans-serif;
+    color: #030202;
+   padding: 5px;
+    line-height: 1.2;
+    border: #010101 1px solid;
+    
+}
+/* Flexbox for labs */
+.labs-flex {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.lab-card {
+    border: 2px solid black;
+    padding: 16px;
+    border-radius: 8px;
+    background: #fff;
+    min-width: 220px;
+    max-width: 300px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lab-card a {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: #222;
+}
+.lab-card p {
+    margin: 0;
+    font-size: 0.95em;
+}
+.class-labs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 30px;
+    background: #E6E6FA;
+    background-size: 100% 100%;
+    opacity: 0.6;
+    font: bold 25px Century Gothic;
+    border-color: #010101;
+
+}
+h1 {
+    text-align: center;
+    font: bold 40px Century Gothic;
+    color: #0a0a0a;
+    padding-top: 2px;
+    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+h2 {
+    text-align: center;
+    font: bold 20px Century Gothic;
+    color: #020202;
+    padding-bottom: 5px;
+}
+
+h3 {
+    text-align: center;
+    font: bold 30px Century Gothic;
+    color: #4B0082;
+    padding-bottom: 2px;
+}
+
+h4 {
+
+    text-align: center;
+    font: arial;
+    font-size: 20px;
+    color: #010101;
+    border: black 2px solid;
+    border-radius: 10%;
+    padding: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+
+}
+
+footer {
+    text-align: center;
+    font: bold 15px Century Gothic;
+    color: #f8f6f9;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #0a0a0a;
+    border-radius: 35%;
+}
+nav {
+    background-color: #f4eff7;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 20px;
+    border: #080707 2px solid;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font: bold 20px Century Gothic;
+}
+a:link {
+    text-decoration: none;
+    color: #070607;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    letter-spacing: 1px;
+
+}
+a:hover {
+    color: #f4eff7;
+    transition: 0.3s;
+    text-shadow: 0 0 2px #4B0082, 0 0 2px #4B0082, 0 0 2px #4B0082;
+}
+
+a:active {
+    color: #4B0082;
+}
+
+a:visited {
+    color: #7e0909;
+    text-decoration-thickness: 2px;
+
+}
+
+a:focus {
+    outline: 2px solid #4B0082;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding: 2px;
+    margin-bottom: 2px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    border: 1px solid #080707;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}

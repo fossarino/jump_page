@@ -1,0 +1,95 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(120deg, #f8ffae 0%, #43c6ac 100%);
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#mouse-info {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px 24px;
+    font-size: 1.2em;
+    z-index: 100;
+    transition: background 0.3s;
+}
+
+#click-target {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+    border-radius: 50%;
+    box-shadow: 0 4px 24px rgba(238, 9, 121, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.3em;
+    cursor: pointer;
+    user-select: none;
+    transition: box-shadow 0.3s;
+}
+
+#click-target:active {
+    box-shadow: 0 8px 32px rgba(238, 9, 121, 0.3);
+}
+
+#animated-ball {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, #43c6ac 60%, #191654 100%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99;
+    transition: transform 0.7s cubic-bezier(.68, -0.55, .27, 1.55), opacity 0.5s;
+    opacity: 0;
+}
+
+#animated-star {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+    z-index: 98;
+    opacity: 0;
+    transition: transform 0.8s cubic-bezier(.68, -0.55, .27, 1.55), opacity 0.5s;
+}
+
+.star {
+    width: 100%;
+    height: 100%;
+    background: gold;
+    clip-path: polygon(50% 0%,
+            61% 35%,
+            98% 35%,
+            68% 57%,
+            79% 91%,
+            50% 70%,
+            21% 91%,
+            32% 57%,
+            2% 35%,
+            39% 35%);
+    box-shadow: 0 2px 12px rgba(255, 215, 0, 0.3);
+}
+
+#mouse-shadow {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px 12px rgba(0,0,0,0.25);
+    background: transparent;
+    z-index: 97;
+    transition: left 0.1s, top 0.1s;
+}
